@@ -1,0 +1,4 @@
+*.pyc
+/static/
+/FlaskBlog-env/
+*.db
