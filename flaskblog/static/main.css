@@ -12,6 +12,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #111111;
 }
 
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
 .site-header .navbar-nav .nav-link {
   color: #cbd5db;
 }
@@ -83,4 +90,39 @@ a.article-title:hover {
 .list-group-item-light:hover {
   background-color: rgba(0,0,0, 0.9);
   color: rgba(255,255,255, 0.8);
+}
+
+.page {
+  background-color: #000000;
+  border-color: #FFFFFF;
+  color: #ffffff;
+}
+
+.page-active {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #000000;
+}
+
+.page-active:hover {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #000000;
+}
+
+.page-active:active {
+  background-color: #888888;
+  border-color: #FFFFFF;
+  color: #ffffff;
+}
+
+.page:hover {
+  background-color: #888888;
+  border-color: #FFFFFF;
+}
+
+.page:active {
+  background-color: #888888;
+  border-color: #FFFFFF;
+  color: #ffffff;
 }
