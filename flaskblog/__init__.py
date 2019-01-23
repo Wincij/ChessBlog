@@ -26,10 +26,12 @@ def create_app(config_class=Config):
     from flaskblog.users.routes import users
     from flaskblog.posts.routes import posts
     from flaskblog.main.routes import main
+    from flaskblog.studies.routes import studies_blueprint
     from flaskblog.errors.handlers import errors
     app.register_blueprint(users)
     app.register_blueprint(posts)
     app.register_blueprint(main)
+    app.register_blueprint(studies_blueprint)
     app.register_blueprint(errors)
 
     return app

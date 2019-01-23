@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <!-- <div class="article-content"> -->
+    {% for study in studies %}
+      <div class="container content-section" >
+        <div class="article-metadata">
+        </div>
+          <h2><a class="article-title">{{ study.title}}</a></h2>
+          </br>
+          </br>
+          <iframe src="{{ study.board }}" width=600 height=397 frameborder=0></iframe>
+          </br>
+          </br>
+          </br>
+          <span>{{ study.content }}</span>
+      </div>
+
+    {% endfor %}
+  <!-- </div> -->
+
+{% endblock %}
