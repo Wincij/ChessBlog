@@ -16,7 +16,7 @@ class User(db.Model, UserMixin):
     image_file = db.Column(db.String(120), nullable = False, default = 'default.jpg')
     password = db.Column(db.String(60), nullable = False)
     posts = db.relationship('Post', backref='author', lazy=True)
-    studies = db.relationship('Study', backref='author', lazy=True)
+    # studies = db.relationship('Study', backref='author', lazy=True)
 
     def get_reset_token(self, expires_sec = 1800):
         s = Serializer(current_app.config['SECRET_KEY'], expires_sec)
@@ -54,5 +54,5 @@ class Study(db.Model):
     title = db.Column(db.String(100), nullable = False)
     content = db.Column(db.Text, nullable = False)
     board = db.Column(db.String(100), nullable = False)
-    category = db.Column(db.String(), nullable = True)
+    category = db.Column(db.Integer, nullable = True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable = False)

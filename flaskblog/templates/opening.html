@@ -2,19 +2,37 @@
 {% block content %}
 
   <!-- <div class="article-content"> -->
+  <div class="container content-section">
+    <h1>OPENINGS:</h1>
+    A chess opening is the group of initial moves of a game (the "opening moves"). Recognized sequences of opening moves are referred to as openings and have been given names such as the Ruy Lopez or Sicilian Defense. They are catalogued in reference works such as the Encyclopaedia of Chess Openings. There are dozens of different openings, varying widely in character from quiet positional play (for example, the Réti Opening) to very aggressive (the Latvian Gambit). In some opening lines, the exact sequence considered best for both sides has been worked out to more than 30 moves. Professional players spend years studying openings and continue doing so throughout their careers, as opening theory continues to evolve.
+    </br>
+    The fundamental strategic aims of most openings are similar:
+    </br>
+    <ul>
+      <li>Development: This is the technique of placing the pieces (particularly bishops and knights) on useful squares where they will have an optimal impact on the game.</li>
+      <li>Control of the center: Control of the central squares allows pieces to be moved to any part of the board relatively easily, and can also have a cramping effect on the opponent.</li>
+      <li>King safety: It is critical to keep the king safe from dangerous possibilities. A correctly timed castling can often enhance this.</li>
+      <li>Pawn structure: Players strive to avoid the creation of pawn weaknesses such as isolated, doubled, or backward pawns, and pawn islands – and to force such weaknesses in the opponent's position.</li>
+    </ul>
+    Most players and theoreticians consider that White, by virtue of the first move, begins the game with a small advantage. This initially gives White the initiative. Black usually strives to neutralize White's advantage and achieve equality, or to develop dynamic counterplay in an unbalanced position.
+
+  </div>
     {% for study in studies %}
       <div class="container content-section" >
+        <div class="container content-section" >
         <div class="article-metadata">
+          {{ study.category }}
         </div>
           <h2><a class="article-title">{{ study.title}}</a></h2>
           </br>
           </br>
-          <iframe src="{{ study.board }}" width=600 height=397 frameborder=0></iframe>
+          <iframe src="{{ study.board }}" width="100%" height=397 frameborder=0></iframe>
           </br>
           </br>
           </br>
           <span>{{ study.content }}</span>
       </div>
+    </div>
 
     {% endfor %}
   <!-- </div> -->

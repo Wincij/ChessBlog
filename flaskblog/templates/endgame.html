@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <!-- <div class="article-content"> -->
+  <div class="container content-section">
+    <h1>ENDGAMES:</h1>
+    The endgame (also end game or ending) is the stage of the game when there are few pieces left on the board. There are three main strategic differences between earlier stages of the game and the endgame:
+    <ul>
+      <li>Pawns become more important. Endgames often revolve around endeavors to promote a pawn by advancing it to the furthest rank.</li>
+      <li>The king, which requires safeguarding from attack during the middlegame, emerges as a strong piece in the endgame. It is often brought to the center of the board where it can protect its own pawns, attack enemy pawns, and hinder moves of the opponent's king.</li>
+    </ul>
+    Endgames can be classified according to the type of pieces remaining on the board. Basic checkmates are positions in which one side has only a king and the other side has one or two pieces and can checkmate the opposing king, with the pieces working together with their king. For example, king and pawn endgames involve only kings and pawns on one or both sides, and the task of the stronger side is to promote one of the pawns. Other more complicated endings are classified according to pieces on the board other than kings, such as "rook and pawn versus rook" endgames.
+  </div>
+    {% for study in studies %}
+      <div class="container content-section" >
+        <div class="container content-section" >
+        <div class="article-metadata">
+          {{ study.category }}
+        </div>
+          <h2><a class="article-title">{{ study.title}}</a></h2>
+          </br>
+          </br>
+          <iframe src="{{ study.board }}" width="100%" height=397 frameborder=0></iframe>
+          </br>
+          </br>
+          </br>
+          <span>{{ study.content }}</span>
+      </div>
+    </div>
+
+    {% endfor %}
+  <!-- </div> -->
+
+{% endblock %}

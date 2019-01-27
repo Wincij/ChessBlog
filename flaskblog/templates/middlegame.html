@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <!-- <div class="article-content"> -->
+  <div class="container content-section">
+    <h1>MIDDLEGAME:</h1>
+    The middlegame is the part of the game which starts after the opening. There is no clear line between the opening and the middlegame, but typically the middlegame will start when most pieces have been developed. (Similarly, there is no clear transition from the middlegame to the endgame; see start of the endgame.) Because the opening theory has ended, players have to form plans based on the features of the position, and at the same time take into account the tactical possibilities of the position. The middlegame is the phase in which most combinations occur. Combinations are a series of tactical moves executed to achieve some gain. Middlegame combinations are often connected with an attack against the opponent's king. Some typical patterns have their own names; for example, the Boden's Mate or the Lasker–Bauer combination.
+
+    Specific plans or strategic themes will often arise from particular groups of openings which result in a specific type of pawn structure. An example is the minority attack, which is the attack of queenside pawns against an opponent who has more pawns on the queenside. The study of openings is therefore connected to the preparation of plans that are typical of the resulting middlegames.
+
+    Another important strategic question in the middlegame is whether and how to reduce material and transition into an endgame (i.e. simplify). Minor material advantages can generally be transformed into victory only in an endgame, and therefore the stronger side must choose an appropriate way to achieve an ending. Not every reduction of material is good for this purpose; for example, if one side keeps a light-squared bishop and the opponent has a dark-squared one, the transformation into a bishops and pawns ending is usually advantageous for the weaker side only, because an endgame with bishops on opposite colors is likely to be a draw, even with an advantage of a pawn, or sometimes even with a two-pawn advantage.
+
+  </div>
+    {% for study in studies %}
+      <div class="container content-section" >
+        <div class="container content-section" >
+        <div class="article-metadata">
+          {{ study.category }}
+        </div>
+          <h2><a class="article-title">{{ study.title}}</a></h2>
+          </br>
+          </br>
+          <iframe src="{{ study.board }}" width="100%" height=397 frameborder=0></iframe>
+          </br>
+          </br>
+          </br>
+          <span>{{ study.content }}</span>
+      </div>
+    </div>
+
+    {% endfor %}
+  <!-- </div> -->
+
+{% endblock %}

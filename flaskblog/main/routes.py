@@ -20,3 +20,9 @@ def home():
 @main.route("/about")
 def about():
     return render_template('about.html')
+
+
+
+@main.route("/503")
+def about2():
+    return render_template('errors/503.html')
