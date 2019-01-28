@@ -28,7 +28,7 @@ def welcome():
 def home():
     page = request.args.get('page', 1, type=int)
     __random__ = randint(0, 7)
-    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page = page, per_page=3)
+    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page = page, per_page=5)
     return render_template('home.html', posts = posts, quote = maxims[__random__])
 
 
