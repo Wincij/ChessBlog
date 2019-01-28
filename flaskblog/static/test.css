@@ -1,0 +1,11 @@
+.media.content-section {
+  opacity: 0;
+  transition: opacity 0.7s ease-in;
+  background-color: #EEEEEE;
+  /* display: inline-block; */
+
+}
+
+.media.content-section.show {
+  opacity: 0.9;
+}

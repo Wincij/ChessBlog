@@ -61,6 +61,7 @@ a.article-title:hover {
 
 .article-content {
   white-space: pre-line;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .article-img {

@@ -2,12 +2,8 @@
 {% extends "layout.html" %}
 {% block content %}
 
-{% if current_user.is_authenticated %}
-<a href="{{ url_for('studies.new_study') }}"><button type="button" class="btn btn-outline-secondary" >+Create post</button></a>
-{% else %}
-Please <a href="{{ url_for('users.login') }}" class="custom-link">Login</a> to add your content. Don't have an account? <a href="{{ url_for('users.register') }}" class="custom-link">Register Today</a>.
-{% endif %}
-</br></br>
+
+
     {% for post in posts.items %}
     <article class="media content-section">
       <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
@@ -23,7 +19,13 @@ Please <a href="{{ url_for('users.login') }}" class="custom-link">Login</a> to a
 
     {% endfor %}
 
-
+    {% if current_user.is_authenticated %}
+    <a href="{{ url_for('studies.new_study') }}"><button type="button" class="btn btn-info" >+Create post</button></a>
+    {% else %}
+    Please <a href="{{ url_for('users.login') }}" class="custom-link">Login</a> to add your content. Don't have an account? <a href="{{ url_for('users.register') }}" class="custom-link">Register Today</a>.
+    {% endif %}
+    </br>
+    </br>
 
     {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
       {% if page_num %}
