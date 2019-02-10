@@ -12,6 +12,34 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #111111;
 }
 
+.transparent {
+  background-color: rgba(16,16,16,0.8);
+}
+
+.welcome-2 {
+  font-family: 'Pinyon Script';
+  font-size: 2.5rem;
+  color: #FFFFFF;
+}
+
+.welcome-3 {
+  font-family: 'Pinyon Script';
+  font-size: 1.5rem;
+  color: #FFFFFF;
+}
+
+.logo-text {
+  font-family: 'Julius Sans One', sans-serif, bold;
+  font-size: 1.4rem;
+  font-weight:bold;
+  color: #FFFFFF;
+}
+
+.carousel-img {
+  border: groove 3px  #222222;
+  border-radius:5px;
+}
+
 .custom-link {
   color: #DDDDDD;
 }
@@ -48,6 +76,11 @@ h1, h2, h3, h4, h5, h6 {
   border-color: rgba(255, 255, 255, 0.9);
   border-radius: 3px;
   margin-bottom: 20px;
+}
+
+.welcome-section {
+  background: rgba(255, 255, 255, 0.0);
+
 }
 
 .article-title {
