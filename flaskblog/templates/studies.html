@@ -14,12 +14,18 @@
       </hl>
     </div>
     <ul>
-      <li><a href="{{ url_for('studies.openings') }}">Openings</a></li>
-      {% for last in category1 %}
-      <small>{{ last.title }}</small>
+      <li>Openings</li>
+      {% for lastest in category1 %}
+      <small><a href="{{ url_for('studies.study', study_id = lastest.id, study_category = lastest.category) }}" class="md-2">{{ lastest.title }}</small></br>
       {% endfor %}
-      <li><a href="{{ url_for('studies.middlegames') }}">Middlegames</a></li>
-      <li><a href="{{ url_for('studies.endgames') }}">Endgames</a></li>
+      <li><a href="#">Middlegames</a></li>
+      {% for lastest in category2 %}
+      <small><a href="{{ url_for('studies.study', study_id = lastest.id, study_category = lastest.category) }}" class="md-2">{{ lastest.title }}</small></br>
+      {% endfor %}
+      <li><a href="#">Endgames</a></li>
+      {% for lastest in category3 %}
+      <small><a href="{{ url_for('studies.study', study_id = lastest.id, study_category = lastest.category) }}" class="md-2">{{ lastest.title }}</small></br>
+      {% endfor %}
 
     </ul>
   </div>
